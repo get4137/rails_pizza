@@ -1,0 +1,49 @@
+<%= form_with model: @pizza, local: true do |form| %>
+  <% if @pizza.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@pizza.errors.count, "error") %> prohibited
+        this article from being saved:
+      </h2>
+      <ul>
+        <% @pizza.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </p>
+  <p>
+    <%= form.label :description %><br>
+    <%= form.text_field :description %>
+  </p>
+  <p>
+    <%= form.label :price %><br>
+    <%= form.text_field :price %>
+  </p>
+  <p>
+    <%= form.label :size %><br>
+    <%= form.text_field :size %>
+  <p>
+    <%= form.label :is_spicy %><br>
+    <%= form.text_field :is_spicy %>
+  </p>
+  <p>
+    <%= form.label :is_veg %><br>
+    <%= form.text_field :is_veg %>
+  </p>
+  <p>
+    <%= form.label :best_offer %><br>
+    <%= form.text_field :best_offer %>
+  </p>
+  <p>
+    <%= form.label :path_to_image %><br>
+    <%= form.text_field :path_to_image %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

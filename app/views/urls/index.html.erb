@@ -1,0 +1,14 @@
+<h1>Urls#index</h1>
+<%= link_to 'Add or change url', new_url_path(@url)%>
+<div class="row">
+  <%@urls.each do |t|%>
+    <div class ="col-sm">
+      <div>
+        <%="old url: #{t.old_url}"%>
+      </div>
+      <div>
+        <%="new url: #{t.new_url}"%>
+      </div>
+    </div>
+  <%end%>
+</div>

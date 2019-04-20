@@ -1,0 +1,35 @@
+<h1>Pizzas#show</h1>
+<p>
+  <strong>Title:</strong>
+  <%= @pizza.title %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%= @pizza.description %>
+</p>
+<p>
+  <strong>Price:</strong>
+  <%= @pizza.price %>
+</p>
+<p>
+  <strong>Size:</strong>
+  <%= @pizza.size %>
+</p>
+<p>
+  <strong>Is spicy?:</strong>
+  <%= @pizza.is_spicy %>
+</p>
+<p>
+  <strong>Is veg?:</strong>
+  <%= @pizza.is_veg %>
+</p>
+<p>
+  <strong>Best offer:</strong>
+  <%= @pizza.best_offer %>
+</p>
+<p>
+  <strong>Path to image:</strong>
+  <%= @pizza.path_to_image %>
+</p>
+<%= link_to 'Edit', edit_pizza_path(@pizza) %>
+<%= link_to 'Back', pizzas_path %>

@@ -1,0 +1,12 @@
+<h1>Notes#show</h1>
+<p>
+  <strong>Nickname:</strong>
+  <%= @note.user.nickname %>
+</p>
+<p>
+  <strong>Text:</strong>
+  <%= @note.message %>
+</p>
+
+<%= link_to 'Edit', edit_note_path(@note) %>
+<%= link_to 'Back', new_note_path %>

@@ -1,0 +1,11 @@
+<h1>Urls#show</h1>
+<p>
+  <strong>NOld URL:</strong>
+  <%= @url.old_url %>
+</p>
+<p>
+  <strong>New URL:</strong>
+  <%= @url.new_url %>
+</p>
+<%= link_to 'Edit', edit_url_path(@url) %>
+<%= link_to 'Back', new_url_path %>

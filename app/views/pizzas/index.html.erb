@@ -1,0 +1,33 @@
+<h1>Pizzas#index</h1>
+<%= link_to 'Add or change pizza', new_pizza_path(@pizza)%>
+<%= link_to 'Add or change order', new_order_path(@order)%>
+<div class="row">
+  <%@pizzas.each do |t|%>
+    <div class ="col-sm">
+      <div>
+        <%=t.title%>
+      </div>
+      <div>
+        <img src="<%=t.path_to_image%>"/>
+      </div>
+      <div>
+        <%="price: #{t.price} usd"%>
+      </div>
+      <div>
+        <%="size: #{t.size} cm"%>
+      </div>
+      <div>
+        <%="composition: #{t.description}"%>
+      </div>
+      <div>
+        <%="spicy: #{t.is_spicy}"%>
+      </div>
+      <div>
+        <%="veg: #{t.is_veg}"%>
+      </div>
+      <div>
+        <%="best offer: #{t.best_offer}"%>
+      </div>
+    </div>
+  <%end%>
+</div>

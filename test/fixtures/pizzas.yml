@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyText
+  size: 9.99
+  is_spicy: false
+  is_veg: false
+  best_offer: false
+  path_to_image: MyString
+  t.timestamps: MyString
+
+two:
+  title: MyString
+  description: MyText
+  size: 9.99
+  is_spicy: false
+  is_veg: false
+  best_offer: false
+  path_to_image: MyString
+  t.timestamps: MyString
