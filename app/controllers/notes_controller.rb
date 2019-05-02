@@ -1,7 +1,7 @@
 class NotesController < ApplicationController
-  before_action :authenticate_user!, :only => [:edit, :new, :create, :update, :destroy, :show]
+  before_action :authenticate_user!, :only => [:edit, :new, :create, :update, :destroy, :show, :index]
   def index
-    @notes = Note.all
+    @notes = current_user.notes
   end
   def show
     @note = Note.find(params[:id])
