@@ -1,15 +1,20 @@
 class OrdersController < ApplicationController
-  http_basic_authenticate_with name: "admin", password: "admin", :only => [:edit, :new, :create, :update, :destroy]
+  USERS = { 'admin' => 'admin' }.freeze
+  before_action :authenticate
+
   def show
     @order = Order.find(params[:id])
   end
+
   def new
     @order = Order.new
     @orders = Order.all
   end
+
   def edit
     @order = Order.find(params[:id])
   end
+
   def create
     @order = Order.new(order_params)
     if @order.save
@@ -18,6 +23,7 @@ class OrdersController < ApplicationController
       render 'new'
     end
   end
+
   def update
     @order = Order.find(params[:id])
     if @order.update(order_params)
@@ -26,12 +32,21 @@ class OrdersController < ApplicationController
       render 'edit'
     end
   end
+
   def destroy
     @order = Order.find(params[:id])
     @order.destroy
     redirect_to orders_path
   end
+
   private
+
+  def authenticate
+    authenticate_or_request_with_http_digest do |username|
+      USERS[username]
+    end
+  end
+
   def order_params
     params.require(:order).permit(:title, :description, :name, :email, :phone)
   end
