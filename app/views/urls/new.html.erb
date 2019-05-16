@@ -3,13 +3,10 @@
 <%= link_to 'Back', urls_path %>
 <table>
   <tr>
-    <th>Old URL</th>
-    <th>New URL</th>
-    <th></th>
+    <th>urls for check:</th>
   </tr>
   <% @urls.each do |url| %>
     <tr>
-      <td><%= url.old_url %></td>
       <td><%= url.new_url %></td>
       <td><%= link_to 'Show', url_path(url) %></td>
       <td><%= link_to 'Edit', edit_url_path(url) %></td>

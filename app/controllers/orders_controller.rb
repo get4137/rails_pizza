@@ -1,6 +1,5 @@
 class OrdersController < ApplicationController
-  USERS = { 'admin' => 'admin' }.freeze
-  before_action :authenticate
+  before_action :authenticate_user!
 
   def show
     @order = Order.find(params[:id])
@@ -40,12 +39,6 @@ class OrdersController < ApplicationController
   end
 
   private
-
-  def authenticate
-    authenticate_or_request_with_http_digest do |username|
-      USERS[username]
-    end
-  end
 
   def order_params
     params.require(:order).permit(:title, :description, :name, :email, :phone)

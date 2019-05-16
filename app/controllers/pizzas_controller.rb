@@ -1,6 +1,6 @@
 class PizzasController < ApplicationController
-  http_basic_authenticate_with name: 'admin', password: 'admin',
-                               only: %i[edit new create update destroy]
+  before_action :authenticate_user!, except: %i[show index]
+
   def index
     @pizzas = Pizza.all
   end
@@ -23,7 +23,7 @@ class PizzasController < ApplicationController
     if @pizza.save
       redirect_to @pizza
     else
-    render 'new'
+      render 'new'
     end
   end
 
@@ -42,7 +42,7 @@ class PizzasController < ApplicationController
     redirect_to pizzas_path
   end
 
-     private
+  private
 
   def pizza_params
     params.require(:pizza).permit(:title,

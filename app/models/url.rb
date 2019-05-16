@@ -1,3 +1,4 @@
 class Url < ApplicationRecord
-  validates :old_url, :new_url, presence: true
+  belongs_to :user
+  validates :new_url, presence: true
 end

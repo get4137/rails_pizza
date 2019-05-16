@@ -5,7 +5,5 @@ Rails.application.routes.draw do
   resources :pizzas
   resources :orders
   resources :urls
-  resources :notes do
-    resources :comments
-  end
+  resources :notes
 end

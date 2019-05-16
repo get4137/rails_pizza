@@ -1,8 +1,8 @@
 class UrlsController < ApplicationController
   before_action :authenticate_user!,
-                only: %i[edit new create update destroy]
+                only: %i[edit new create update destroy show index]
   def index
-    @urls = Url.all
+    @urls = current_user.urls
   end
 
   def show
@@ -19,7 +19,7 @@ class UrlsController < ApplicationController
   end
 
   def create
-    @url = Url.new(url_params)
+    @url = current_user.urls.build(url_params)
     if @url.save
       redirect_to @url
     else

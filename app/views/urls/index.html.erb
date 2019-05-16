@@ -4,10 +4,7 @@
   <%@urls.each do |t|%>
     <div class ="col-sm">
       <div>
-        <%="old url: #{t.old_url}"%>
-      </div>
-      <div>
-        <%="new url: #{t.new_url}"%>
+        <%=t.new_url%>
       </div>
     </div>
   <%end%>
