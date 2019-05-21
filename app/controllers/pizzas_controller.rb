@@ -10,7 +10,6 @@ class PizzasController < ApplicationController
   end
 
   def new
-    @pizzas = Pizza.all
     @pizza = Pizza.new
   end
 

@@ -1,22 +1,16 @@
 <%= form_with model: @url, local: true do |form| %>
+
   <% if @url.errors.any? %>
-    <div id="error_explanation">
-      <h2>
-        <%= pluralize(@url.errors.count, "error") %> prohibited
-        this article from being saved:
-      </h2>
-      <ul>
-        <% @url.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
+  <% @url.errors.full_messages.each do |msg| %>
+    <div class='alert alert-danger'><%= msg %></div>
   <% end %>
+<% end %>
+
   <p>
     <%= form.label :new_url %><br>
     <%= form.text_field(:new_url, {:class => 'form-control'}) %>
   </p>
   <p>
-    <%= form.submit(:class => 'btn btn-success') %>
+    <%= form.submit(:class => 'btn btn-outline-primary') %>
   </p>
 <% end %>

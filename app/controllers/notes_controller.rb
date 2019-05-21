@@ -10,8 +10,7 @@ class NotesController < ApplicationController
   end
 
   def new
-    @note = current_user.notes.build
-    @notes = Note.all
+    @note = Note.new
   end
 
   def edit

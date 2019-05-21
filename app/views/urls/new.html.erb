@@ -1,15 +1,3 @@
 <h2>New url</h2>
 <%= render 'form' %>
 <%= link_to 'Back', urls_path %>
-<table>
-  <tr>
-    <th>urls for check:</th>
-  </tr>
-  <% @urls.each do |url| %>
-    <tr>
-      <td><%= url.new_url %></td>
-      <td><%= link_to 'Show', url_path(url) %></td>
-      <td><%= link_to 'Edit', edit_url_path(url) %></td>
-    </tr>
-  <% end %>
-</table>

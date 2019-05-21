@@ -11,7 +11,6 @@ class UrlsController < ApplicationController
   end
 
   def new
-    @urls = current_user.urls
     @url = Url.new
   end
 
