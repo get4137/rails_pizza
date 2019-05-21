@@ -1,6 +1,7 @@
 <h2>Pizzas</h2>
-<%= link_to 'Add or change pizza', new_pizza_path(@pizza)%><br>
-<%= link_to 'Add or change order', new_order_path(@order)%>
+
+<%= link_to 'Add or change order', new_order_path(@order), :class => "btn btn-outline-primary btn-sm" %>
+<hr>
 
 <div class="row">
   <%@pizzas.each do |t|%>
@@ -29,11 +30,9 @@
       <div>
         <%="best offer: #{t.best_offer}"%>
       </div>
-      <div>
-
-      </div>
+      <hr>
     </div>
   <%end%>
-
-
 </div>
+
+<%= link_to 'Add or change pizza', new_pizza_path(@pizza), :class => "btn btn-outline-primary btn-sm" %>

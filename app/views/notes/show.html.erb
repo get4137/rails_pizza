@@ -1,4 +1,5 @@
 <h2>Show note</h2>
+<hr>
 <p>
   <strong>Nickname:</strong>
   <%= @note.user.nickname %>
@@ -7,6 +8,6 @@
   <strong>Text:</strong>
   <%= @note.message %>
 </p>
-
-<%= link_to 'Edit', edit_note_path(@note) %>
-<%= link_to 'Back', new_note_path %>
+<hr>
+<%= link_to "Edit", edit_note_path(@note), :class => "btn btn-outline-primary btn-sm" %>
+<%= link_to "Back", notes_path, :class => "btn btn-outline-primary btn-sm" %>

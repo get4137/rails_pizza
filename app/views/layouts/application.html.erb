@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <title>RailsPizza</title>
     <%= csrf_meta_tags %>
@@ -9,18 +10,23 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-  <body>
 
-  <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-    <h5 class="my-0 mr-md-auto font-weight-normal">Portfolio</h5>
-    <nav class="my-2 my-md-0 mr-md-3">
-      <span class="p-2 text-dark"><%= link_to 'Main page', home_path %></span>
-      <span class="p-2 text-dark"><%= link_to 'Your Account', user_root_path %></span>
-      <span class="p-2 text-dark"><%= link_to 'Pizza', pizzas_path %></span>
-      <span class="p-2 text-dark"><%= link_to 'Notes', notes_path %></span>
-      <span class="p-2 text-dark"><%= link_to 'Url', urls_path %></span>
-    </nav>
-  </div>
+<body>
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+  <h5 class="my-0 mr-md-auto font-weight-normal">Portfolio</h5>
+  <nav class="my-2 my-md-0 mr-md-3">
+    <span class="badge badge-light"><%= link_to 'Main page', home_path %></span>
+    <span class="badge badge-light"><%= link_to 'Your profile', user_root_path %></span>
+    <span class="badge badge-light"><%= link_to 'Pizza', pizzas_path %></span>
+    <span class="badge badge-light"><%= link_to 'Notes', notes_path %></span>
+    <span class="badge badge-light"><%= link_to 'Url', urls_path %></span>
+  </nav>
+  <% if user_signed_in? %>
+    <%= link_to "Log out", destroy_user_session_path, :method => :delete, :class => "btn btn-outline-danger btn-sm" %>
+  <% else %>
+    <%= link_to "Log in", new_user_session_path, :class => "btn btn-outline-success btn-sm" %>
+  <% end %>
+</div>
   <div class="container">
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
@@ -31,4 +37,5 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js" integrity="sha384-7aThvCh9TypR7fIc2HV4O/nFMVCBwyIUKL8XCtKE+8xgCgl/PQGuFsvShjr74PBp" crossorigin="anonymous"></script>
   </body>
+
 </html>

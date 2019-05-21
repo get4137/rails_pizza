@@ -1,5 +1,6 @@
 <h2>Notes</h2>
-<%= link_to 'Add note', new_note_path(@note)%>
+<%= link_to 'Add note', new_note_path(@note), :class => "btn btn-outline-primary btn-sm" %>
+<hr>
 <div class="row">
   <%@notes.each do |t|%>
     <div class ="col-sm">
@@ -9,7 +10,8 @@
       <div>
         <%="note: #{t.message}"%>
       </div>
-      <td><%= link_to 'Show', note_path(t) %></td>
+      <td><%= link_to 'Show', note_path(t), :class => "btn btn-outline-primary btn-sm" %></td>
+      <hr>
     </div>
   <%end%>
 </div>

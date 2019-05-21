@@ -1,5 +1,7 @@
 <h2>Orders edit</h2>
+<hr>
 <%= render 'form' %>
-<%= link_to 'Back', orders_path %>
-<%= link_to 'Destroy', order_path(@order), method: :delete %>
+<hr>
+<%= link_to "Back", orders_path, :class => "btn btn-outline-primary btn-sm" %>
+<%= link_to "Destroy", order_path(@order), method: :delete, :class => "btn btn-outline-primary btn-sm" %>
 

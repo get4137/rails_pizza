@@ -1,5 +1,6 @@
 <h2>Urls</h2>
-<%= link_to 'Add or change url', new_url_path(@url)%>
+<%= link_to 'Add or change url', new_url_path(@url), :class => "btn btn-outline-primary btn-sm" %>
+<hr>
 <div class="row">
   <%@urls.each do |t|%>
     <div class ="col-sm">
@@ -10,8 +11,9 @@
         <%="status: #{@status}"%>
       </div>
       <div>
-        <%= link_to 'server status', urls_path %>
+        <%= link_to 'server status', urls_path, :class => "btn btn-outline-primary btn-sm" %>
       </div>
+      <hr>
     </div>
   <%end%>
 </div>

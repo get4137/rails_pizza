@@ -1,5 +1,6 @@
 <h2>Urls edit</h2>
+<hr>
 <%= render 'form' %>
-<%= link_to 'Back', urls_path %>
-<%= link_to 'Destroy', url_path(@url), method: :delete %>
-
+<hr>
+<%= link_to "Back", urls_path, :class => "btn btn-outline-primary btn-sm" %>
+<%= link_to "Destroy", url_path(@url), method: :delete, :class => "btn btn-outline-primary btn-sm" %>
