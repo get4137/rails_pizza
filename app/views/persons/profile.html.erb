@@ -1,6 +1,4 @@
-<h1>Persons#profile</h1>
-<p>Find me in app/views/persons/profile.html.erb</p>
-
+<h2>Your profile</h2>
 <% if user_signed_in? %>
   <span>Hello, <%= current_user.nickname %></span>
   <%= link_to 'Log out', destroy_user_session_path, :method => :delete %>

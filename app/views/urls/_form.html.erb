@@ -14,9 +14,9 @@
   <% end %>
   <p>
     <%= form.label :new_url %><br>
-    <%= form.text_field :new_url %>
+    <%= form.text_field(:new_url, {:class => 'form-control'}) %>
   </p>
   <p>
-    <%= form.submit %>
+    <%= form.submit(:class => 'btn btn-success') %>
   </p>
 <% end %>

@@ -14,25 +14,25 @@
   <% end %>
   <p>
     <%= form.label :title %><br>
-    <%= form.text_field :title %>
+    <%= form.text_field(:title, {:class => 'form-control'}) %>
   </p>
   <p>
     <%= form.label :price %><br>
-    <%= form.text_field :price %>
+    <%= form.text_field(:price, {:class => 'form-control'}) %>
   </p>
   <p>
     <%= form.label :name %><br>
-    <%= form.text_field :name %>
+    <%= form.text_field(:name, {:class => 'form-control'}) %>
   </p>
   <p>
     <%= form.label :email %><br>
-    <%= form.text_field :email %>
+    <%= form.text_field(:email, {:class => 'form-control'}) %>
   </p>
   <p>
     <%= form.label :phone %><br>
-    <%= form.text_field :phone %>
+    <%= form.text_field(:phone, {:class => 'form-control'}) %>
   </p>
   <p>
-    <%= form.submit %>
+    <%= form.submit(:class => 'btn btn-success') %>
   </p>
 <% end %>

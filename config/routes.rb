@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
+  root 'welcome#index', as: 'home'
   get 'persons/profile', as: 'user_root'
-  root 'welcome#index'
   devise_for :users
   resources :pizzas
   resources :orders

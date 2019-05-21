@@ -1,10 +1,16 @@
-<h1>Urls#index</h1>
+<h2>Urls</h2>
 <%= link_to 'Add or change url', new_url_path(@url)%>
 <div class="row">
   <%@urls.each do |t|%>
     <div class ="col-sm">
       <div>
         <%=t.new_url%>
+      </div>
+      <div>
+        <%="status: #{@status}"%>
+      </div>
+      <div>
+      <button type="button" class="btn btn-success">check server</button>
       </div>
     </div>
   <%end%>

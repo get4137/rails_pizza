@@ -10,14 +10,17 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-  <div class="container">
-    <nav class="navbar navbar-light" style="background-color: #ffd2a3;">
-    <a class="navbar-brand" href="/"><h1>Portfolio</h1></a>
-          <a class="nav-item nav-link active" href="#"><%= link_to 'Your Account', user_root_path %></a>
-          <a class="nav-item nav-link" href="#"><%= link_to 'PIZZA', pizzas_path %></a>
-          <a class="nav-item nav-link" href="#"><%= link_to 'NOTES', notes_path %></a>
-          <a class="nav-item nav-link" href="#"><%= link_to 'URL', urls_path %></a>
+
+  <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+    <h5 class="my-0 mr-md-auto font-weight-normal"><%= link_to 'Portfolio', home_path %></h5>
+    <nav class="my-2 my-md-0 mr-md-3">
+      <span class="p-2 text-dark"><%= link_to 'Your Account', user_root_path %></span>
+      <span class="p-2 text-dark"><%= link_to 'Pizza', pizzas_path %></span>
+      <span class="p-2 text-dark"><%= link_to 'Notes', notes_path %></span>
+      <span class="p-2 text-dark"><%= link_to 'Url', urls_path %></span>
     </nav>
+  </div>
+  <div class="container">
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%=yield%>

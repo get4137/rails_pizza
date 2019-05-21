@@ -14,13 +14,13 @@
   <% end %>
   <p>
     <% form.label :nickname %><br>
-    <% form.text_field :nickname %>
+    <% form.text_field(:nickname,{:class => 'form-control'}) %>
   </p>
   <p>
     <%= form.label :message %><br>
-    <%= form.text_field :message %>
+    <%= form.text_field(:message,{:class => 'form-control'}) %>
   </p>
   <p>
-    <%= form.submit %>
+    <%= form.submit(:class => 'btn btn-success') %>
   </p>
 <% end %>

@@ -3,14 +3,15 @@ class UrlsController < ApplicationController
                 only: %i[edit new create update destroy show index]
   def index
     @urls = current_user.urls
-  end
+    @status = '200'
+    end
 
   def show
     @url = Url.find(params[:id])
   end
 
   def new
-    @urls = Url.all
+    @urls = current_user.urls
     @url = Url.new
   end
 
@@ -47,5 +48,4 @@ class UrlsController < ApplicationController
   def url_params
     params.require(:url).permit(:old_url, :new_url)
   end
-
 end

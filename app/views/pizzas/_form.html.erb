@@ -14,36 +14,36 @@
   <% end %>
   <p>
     <%= form.label :title %><br>
-    <%= form.text_field :title %>
+    <%= form.text_field(:title, {:class => 'form-control'}) %>
   </p>
   <p>
     <%= form.label :description %><br>
-    <%= form.text_field :description %>
+    <%= form.text_field(:description, {:class => 'form-control'}) %>
   </p>
   <p>
     <%= form.label :price %><br>
-    <%= form.text_field :price %>
+    <%= form.text_field(:price, {:class => 'form-control'}) %>
   </p>
   <p>
     <%= form.label :size %><br>
-    <%= form.text_field :size %>
+    <%= form.text_field(:size, {:class => 'form-control'}) %>
   <p>
     <%= form.label :is_spicy %><br>
-    <%= form.text_field :is_spicy %>
+    <%= form.text_field(:is_spicy, {:class => 'form-control'}) %>
   </p>
   <p>
     <%= form.label :is_veg %><br>
-    <%= form.text_field :is_veg %>
+    <%= form.text_field(:is_veg, {:class => 'form-control'}) %>
   </p>
   <p>
     <%= form.label :best_offer %><br>
-    <%= form.text_field :best_offer %>
+    <%= form.text_field(:best_offer, {:class => 'form-control'}) %>
   </p>
   <p>
     <%= form.label :path_to_image %><br>
-    <%= form.text_field :path_to_image %>
+    <%= form.text_field(:path_to_image, {:class => 'form-control'}) %>
   </p>
   <p>
-    <%= form.submit %>
+    <%= form.submit(:class => 'btn btn-success') %>
   </p>
 <% end %>
