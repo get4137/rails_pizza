@@ -10,6 +10,10 @@ class UrlsController < ApplicationController
     @url = Url.find(params[:id])
   end
 
+  def status
+
+  end
+
   def new
     @url = Url.new
   end
