@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class PizzasController < ApplicationController
   before_action :authenticate_user!, except: %i[show index]
 
@@ -53,5 +55,4 @@ class PizzasController < ApplicationController
                                   :best_offer,
                                   :path_to_image)
   end
-
 end

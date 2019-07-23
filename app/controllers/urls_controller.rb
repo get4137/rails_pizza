@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class UrlsController < ApplicationController
   before_action :authenticate_user!,
                 only: %i[edit new create update destroy show index]
@@ -10,9 +12,7 @@ class UrlsController < ApplicationController
     @url = Url.find(params[:id])
   end
 
-  def status
-
-  end
+  def status; end
 
   def new
     @url = Url.new

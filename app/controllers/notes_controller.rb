@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class NotesController < ApplicationController
   before_action :authenticate_user!,
                 only: %i[edit new create update destroy show index]
